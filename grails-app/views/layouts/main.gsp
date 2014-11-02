@@ -23,20 +23,7 @@
 <body>
 
 	<div class="container-fluid">
-		<div class="jumbotron" style="background-color: #eb963b;">
-			<div class="row">
-				<div class="col-md-4">
-					<img class="img-responsive"
-						src="${resource(dir: 'images', file: 'logo.png')}"
-						alt="MarketChase" style="margin: 30px auto 0px auto;" />
-				</div>
-				<div class="col-md-8">
-					<h1
-						style="margin-top: 10%; font-family: Copperplate Gothic; font-weight: bolder;"
-						class="text-center">Atinja seu alvo</h1>
-				</div>
-			</div>
-		</div>
+		
 		<g:layoutBody />
 		<r:layoutResources />
 		<div class="container-fluid">

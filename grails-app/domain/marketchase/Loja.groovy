@@ -7,5 +7,12 @@ class Loja extends Pessoa {
 	String cnpj
 
     static constraints = {
+		
+		
     }
+	
+	static mapping = {
+		
+		discriminator value:"Loja"
+	}
 }
