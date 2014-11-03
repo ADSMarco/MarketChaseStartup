@@ -27,12 +27,12 @@
 				</th>
 				<th>
 					<g:remoteLink controller="anuncio" action="alterar"
-						update="divForm" id="${anuncio.id}">DefinirVencimento</g:remoteLink>
+						update="divFormPeriodo" id="${anuncio.id}" onComplete="javascript:ocultaLink();">DefinirVencimento</g:remoteLink>
 				</th>
 			</tr>
-			<!-- ><tr>
-				<th><div id="divForm" class="span10 offset2"></div></th>
-			</tr>-->
+			<tr>
+				<th><div id="divFormPeriodo" class="span10 offset2"></div></th>
+			</tr>
 		</g:each>
 	</table>
 </g:if>
