@@ -13,7 +13,7 @@ environments {
 	development {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3308/marketchase"
+			url = "jdbc:mysql://localhost:3306/marketchase"
 			username = "MarketChase"
 			password = "2014"
 		}
@@ -24,7 +24,7 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3308/marketchase"
+			url = "jdbc:mysql://localhost:3306/marketchase"
 			username = "MarketChase"
 			password = "2014"
 		}
@@ -32,7 +32,7 @@ environments {
 	production {
 		dataSource {
 			dbCreate = "create-drop"
-			url = "jdbc:mysql://localhost:3308/marketchase"
+			url = "jdbc:mysql://localhost:3306/marketchase"
 			username = "MarketChase"
 			password = "2014"
 		}
