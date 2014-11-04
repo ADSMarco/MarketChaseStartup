@@ -5,7 +5,8 @@ import javax.persistence.DiscriminatorColumn;
 class Pessoa {
 	
 	static hasmany = [contatos: Contato]
-	static hasone = Categoria
+	
+	static hasOne = [endereco:Endereco]
 	
     static constraints = {
     }

@@ -2,7 +2,7 @@
 	<label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
 	<div class="col-sm-8">
 		<input type="text" class="form-control" required="required"
-			id="nomeFantasia" name="logradouro"
+			id="logradouro" name="logradouro"
 			placeholder="Rua, Praça, Avenida, Alameda etc.">
 	</div>
 </div>
@@ -21,7 +21,7 @@
 </div>
 
 <div class="form-group">
-	<label for="complemento" class="col-sm-1 col-sm-offset-1 control-label">Complemento
+	<label for="complemento" class="col-sm-2 control-label">Complemento
 	</label>
 	<div class="col-sm-3">
 		<input type="text" class="form-control" id="complemento"
@@ -42,7 +42,7 @@
 		Referência </label>
 	<div class="col-sm-8">
 		<input type="text" class="form-control" required="required"
-			id="numero" name="numero" placeholder="Proximo à, ao lado de ...">
+			id="referencia" name="referencia" placeholder="Proximo à, ao lado de ...">
 	</div>
 </div>
 

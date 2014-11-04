@@ -3,9 +3,11 @@ package marketchase
 class Categoria {
 
 	String nome
-	Boolean catAnuncio
-	Boolean catLoja
+	String tipo
 	
     static constraints = {
+		
     }
+	
+	
 }

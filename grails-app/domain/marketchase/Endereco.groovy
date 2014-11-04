@@ -10,8 +10,9 @@ class Endereco {
 	String referencia
 	String complemento
 	
-	static belongsTo = Pessoa
+	static belongsTo = [pessoa: Pessoa]
 
     static constraints = {
+		
     }
 }

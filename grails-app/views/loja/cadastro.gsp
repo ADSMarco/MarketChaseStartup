@@ -8,6 +8,12 @@
 <title>MarketChase</title>
 </head>
 <body>
+	<script type="text/javascript">
+		function renderMainPage() {
+			window.location.replace("/MarketChase/loja/teste");
+		}
+	</script>
+	
 	<g:render template="/navs/navMain"></g:render>
 	<br />
 	<br />
@@ -15,11 +21,11 @@
 		<h1 class="col-md-offset-1">Cadastre sua loja</h1>
 		<div class="container">
 			<div class="row">
-
 				<g:formRemote name="frmLoja"
-					url="[controller:'loja', action:'salvar']" class="form-horizontal">
+					url="[controller:'loja', action:'salvar']" class="form-horizontal"
+					onSuccess="renderMainPage()">
 					<br />
-					<div class="panel-body">
+					<div class="col-md-12">
 						<div class="col-md-12 panel panel-default">
 							<h4 class="col-sm-offset-1">
 								<strong>Informações Gerais</strong>
@@ -29,7 +35,7 @@
 						</div>
 					</div>
 
-					<div class="panel-body">
+					<div class="col-md-12">
 						<div class="col-md-12 panel panel-default">
 							<h4 class="col-sm-offset-1">
 								<strong>Endereço</strong>
@@ -40,7 +46,7 @@
 						</div>
 					</div>
 
-					<div class="panel-body">
+					<div class="col-md-12">
 						<div class="col-md-12 panel panel-default">
 							<h4 class="col-sm-offset-1">
 								<strong>Contatos</strong>
@@ -52,19 +58,14 @@
 						</div>
 					</div>
 					<div class="col-sm-12">
-						<a class="btn btn-default btn-lg" href="/MarketChase" >Cancelar</a> <input
-							type="submit" value="Salvar"
+						<a class="btn btn-default btn-lg" href="/MarketChase">Cancelar</a>
+						<input type="submit" value="Salvar"
 							class="btn btn-default btn-lg pull-right" />
-
 					</div>
 				</g:formRemote>
-
 			</div>
-
 		</div>
 	</div>
-
 	<br />
-
 </body>
 </html>

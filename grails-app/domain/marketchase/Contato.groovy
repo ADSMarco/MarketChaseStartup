@@ -5,7 +5,7 @@ class Contato {
 	String valor
 	String tipo
 	
-	static hasone = Pessoa
+	static belongsTo = [pessoa:Pessoa]
 	
     static constraints = {
     }

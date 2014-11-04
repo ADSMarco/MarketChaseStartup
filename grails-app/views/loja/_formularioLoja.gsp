@@ -18,9 +18,9 @@
 </div>
 
 <div class="form-group">
-	<label for="nomeLoja" class="col-sm-2  control-label">CNPJ</label>
+	<label for="cnpj" class="col-sm-2  control-label">CNPJ</label>
 	<div class="col-sm-3">
-		<input type="text" name="cnpj" id="categoriaLoja"
+		<input type="text" name="cnpj" id="cnpj"
 			placeholder="Somente Números" class="form-control">
 
 	</div>
@@ -28,16 +28,11 @@
 		de atuação</label>
 	<div class="col-sm-3">
 		<select name="categoria" id="categoriaLoja" class="form-control">
-			<option value="1">Selecione uma Categoria</option>
-			<option value="2">Qualquer1</option>
-			<option value="3">Qualquer2</option>
-			<option value="4">Qualquer3</option>
-			<option value="5">Qualquer4</option>
-			<option value="6">Qualquer5</option>
-			<option value="7">Qualquer6</option>
-			<option value="8">Qualquer7</option>
-			<option value="9">Qualquer8</option>
-			<option value="10">Qualquer9</option>
+			<g:each var="categoria" in="${categorias}">
+				<option value="${categoria.id}">
+					${categoria.nome}
+				</option>
+			</g:each>
 		</select>
 	</div>
 </div>
