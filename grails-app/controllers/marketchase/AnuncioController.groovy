@@ -1,8 +1,11 @@
 package marketchase
 
 import java.text.DateFormat
+import java.text.ParseException;
 import java.text.SimpleDateFormat
 import java.util.concurrent.ConcurrentSkipListMap.Index;
+
+import javassist.bytecode.stackmap.BasicBlock.Catch;
 
 class AnuncioController {
 
@@ -37,18 +40,24 @@ class AnuncioController {
 		SimpleDateFormat formatacao = new SimpleDateFormat("dd/MM/yyyy")
 		def dataAtual = (new Date()).format("dd/MM/yyyy")
 		String caminhoAplicacao = request.getSession().getServletContext().getRealPath("/").toString()
-		anuncio.foto = anuncioService.salvarAnuncio(params.arquivo,caminhoAplicacao)
+		try{
+			//anuncio.foto = anuncioService.salvarAnuncio(params.arquivo,caminhoAplicacao)
+		}catch(Throwable ex){
+		}
 		anuncio.descricao      = params.descricao
-		anuncio.dataInicio     = formatacao.parse(params.dataInicio)
-		anuncio.dataVencimento = formatacao.parse(params.dataVencimento)
+		try{
+			anuncio.dataInicio     = formatacao.parse(params.dataInicio)
+			anuncio.dataVencimento = formatacao.parse(params.dataVencimento)
+		}catch(ParseException ex){
+		}
 		if ((dataAtual >= anuncio.dataInicio.toString()) && (dataAtual < anuncio.dataVencimento.toString())){
 			anuncio.ativo = true
 		}else{
 			anuncio.ativo = false
 		}
-		def valido = anuncioService.salvar(anuncio)
+			def valido = anuncioService.salvar(anuncio)
 		if (valido){
-			index()
+			redirect(action:"index")
 		}else{
 			render("erro")
 		}
