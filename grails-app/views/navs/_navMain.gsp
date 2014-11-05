@@ -27,6 +27,8 @@
 <div class="modal fade" id="loginModal">
 	<div class="modal-dialog">
 		<div class="modal-content">
+		
+		
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
@@ -34,21 +36,21 @@
 				<h3 class="modal-title">Login</h3>
 			</div>
 			<div class="modal-body">
-				<form class="form-horizontal">
+				<form class="form-horizontal" action = '${request.contextPath}/j_spring_security_check' method='POST' >
 					<div class="form-group">
 						<label for="inputEmail"
 							class="col-sm-2 col-sm-offset-1 control-label">Email</label>
 						<div class="col-sm-7">
-							<input type="email" class="form-control" required="required"
-								id="inputEmail" placeholder="Email">
+							<input type="email" name="j_username" class="form-control" required="required"
+								id="username" placeholder="Email">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword"
 							class="col-sm-2 col-sm-offset-1 control-label">Password</label>
 						<div class="col-sm-7">
-							<input type="password" class="form-control" required="required"
-								id="inputPassword" placeholder="Password">
+							<input type="password" name="j_password" class="form-control" required="required"
+								id="password" placeholder="Password">
 						</div>
 					</div>
 					<div class="form-group">

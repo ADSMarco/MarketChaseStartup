@@ -1,9 +1,13 @@
 package marketchase
-
+import comum.Usuario
 class Pessoa {
 	
-	static hasmany = [contatos: Contato]
-	static hasone = Categoria
+	Usuario usuario
+	
+	static hasMany = [contatos: Contato]
+	static hasOne = Categoria
+	
+	static belongsTo = [Usuario]
 	
     static constraints = {
     }

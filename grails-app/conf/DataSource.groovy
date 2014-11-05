@@ -12,10 +12,10 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3308/marketchase"
-			username = "MarketChase"
-			password = "2014"
+			dbCreate = "update" // one of 'create', 'create-drop','update'
+			url = "jdbc:mysql://localhost/marketchase"
+			username = "root"
+			password = "ROOT"
 		}
 		hibernate {
 			show_sql = true

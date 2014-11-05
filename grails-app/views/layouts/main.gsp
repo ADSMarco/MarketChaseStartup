@@ -18,6 +18,7 @@
 <g:layoutHead />
 
 <g:javascript library="application" />
+<g:javascript library="jquery" />
 <r:layoutResources />
 </head>
 <body>
