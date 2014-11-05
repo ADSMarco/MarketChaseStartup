@@ -14,8 +14,8 @@ environments {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
 			url = "jdbc:mysql://localhost:3306/marketchase"
-			username = "MarketChase"
-			password = "2014"
+			username = "root"
+			password = ""
 		}
 		hibernate {
 			show_sql = true
